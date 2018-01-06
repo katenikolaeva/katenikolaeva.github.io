@@ -1,0 +1,353 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+@font-face {
+  font-family: 'clinica_proregular';
+  src: url('../fonts/ClinicaPro-Regular-webfont.eot');
+  src: url('../fonts/ClinicaPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ClinicaPro-Regular-webfont.woff2') format('woff2'),
+       url('../fonts/ClinicaPro-Regular-webfont.woff') format('woff'),
+       url('../fonts/ClinicaPro-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/ClinicaPro-Regular-webfont.svg#clinica_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'clinica_proregular';
+  margin: 0;
+  padding: 0;
+  color: #0000cc;
+  background: #ffcccc;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  max-width: 80%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #feffff;
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 5%;
+  padding: 6px;
+  z-index: 4;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  margin: 6px 0;
+  background-color: #0000cc;
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+}
+.menu-icon:hover div {
+  background-color: #feffff;
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+  
+/* The navigation menu links */
+.sidenav a {
+  font-family: 'Reenie Beanie', cursive;
+  color: #0000cc;
+  padding: 8px 8px 8px 32px;
+  font-size: 2.8rem;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav {
+  overflow: hidden;
+}
+
+.sidenav a:hover::before {
+  opacity: 1;
+  transform: translate(0,0);
+}
+.sidenav a::before {
+  position: absolute;
+  content: attr(data-hover);
+  opacity: 0;
+  transform: translate(0,100%);
+  -webkit-transition: all .3s ease-in-out .2s;
+  -moz-transition: all .3s ease-in-out .2s;
+  transition: all .3s ease-in-out .2s;
+  
+}
+
+.sidenav a:hover span {
+  opacity: 0;
+  transform: translate(-100%,0);
+}
+
+.sidenav span {
+    -webkit-transition: all .3s ease-in-out .2s;
+    -moz-transition: all .3s ease-in-out .2s;
+    transition: all .3s ease-in-out .2s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main {
+  transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* About */
+
+.container {
+  width: 100%;
+  height: 535px;
+}
+
+.about .col {
+  text-align: center;
+}
+
+.about .col h1 {
+  font-family: 'Reenie Beanie', cursive;
+  margin: 0 auto;
+  font-size: 8rem;
+  margin-top: 1em;
+}
+
+.about .col h1::before {
+  content: '<h1> ';
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2rem;
+  color: slategrey;
+}
+
+.about .col h1::after {
+  content: ' </h1>';
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2rem;
+  color: slategrey;
+}
+
+.about .col p {
+  font-family: 'clinica_proregular';
+  font-size: 1.8rem;  
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.about .col p::before {
+  content: '<p> ';
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2rem;
+  color: slategrey;
+}
+
+.about .col p::after {
+  content: ' </p>';
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2rem;
+  color: slategrey;
+}
+
+@media only screen and (max-width: 575px) {
+ .about .col p {
+   font-size: 1.4rem;
+ }
+
+ .container {
+   height: 650px;
+ }
+
+ .about .col h1{
+  margin-top: 2em;
+  margin-bottom: 5px;
+  font-size: 4.6rem;
+ }
+
+ .about .col h1::before {
+  font-size: 1.4rem;
+}
+
+.about .col h1::after {
+  font-size: 1.4rem;
+}
+
+ .about .col p::before {
+  font-size: 1.4rem;
+}
+
+ .about .col p::after {
+  font-size: 1.4rem;
+}
+  }
+
+@media(min-width: 576px) and (max-width: 767px) {
+  .about .col h1{
+   font-size: 6rem;
+   margin-top: 1em;
+  }
+
+  .about .col h1::before {
+    font-size: 1.6rem;
+  }
+  
+  .about .col h1::after {
+    font-size: 1.6rem;
+  }
+  
+   .about .col p::before {
+    font-size: 1.6rem;
+  }
+  
+   .about .col p::after {
+    font-size: 1.6rem;
+  }
+
+  .about .col p {
+    font-size: 1.6rem;
+  }
+
+  container {
+    height: 500;
+  }
+}
+
+/* Home Logo */
+
+.name-logo {
+  font-family: 'Reenie Beanie', cursive;
+  font-weight: 700;
+  color: #0000cc;
+  position: fixed;
+  top: 10px;
+  right: 5%;
+  text-align: center;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  z-index: 4;
+  transition: all 1s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.name-logo:hover {
+  color: #feffff;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+/* Footer */
+
+.footer {
+  padding: 20px 0;
+  background: #ffcccc;
+  color: #0000cc;
+  text-align: center;
+  width: 100%;
+}
+
+.footer .row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.footer .row .col p {
+  font-family: 'clinica_proregular';
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer .row .col a {
+  padding: 3px;
+}
+
+/* Animation */
+
+.menu-icon {
+  -vendor-animation-duration: 1s;
+  animation-duration: 1s;
+  -vendor-animation-delay: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  -vendor-iteration-count: 1;
+}
+
+.name-logo {
+  -vendor-animation-duration: 1s;
+  animation-duration: 1s;
+  -vendor-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.hello {
+  -vendor-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+.about-me {
+  -vendor-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -vendor-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}

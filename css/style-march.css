@@ -288,9 +288,20 @@ p {
   transition: all 0.6s ease-out;
 }
 
+@media(min-width: 1100px){
 .go-to-website:hover {
   text-decoration: none;
   color: #ffcccc;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+}
+
+.go-to-website:hover {
+  text-decoration: none;
+  color: #291710;
   -webkit-transition: all 0.6s ease-out;
   -moz-transition: all 0.6s ease-out;
   -o-transition: all 0.6s ease-out;

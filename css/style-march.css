@@ -5,6 +5,8 @@
 html {
     box-sizing: border-box;
     font-size: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -31,8 +33,8 @@ body {
   font-family: 'clinica_proregular';
   margin: 0;
   padding: 0;
-  color: #0000cc;
-  background: #ffcccc;
+  color: #291710;
+  background: #feffff;
 }
 
 a {
@@ -41,7 +43,7 @@ a {
 }
 
 p {
-  max-width: 90%;
+  max-width: 700px;
   margin: 0 auto;
   line-height: 1.5;
 }
@@ -56,7 +58,7 @@ p {
   left: 0;
   background-color: #feffff;
   overflow-x: hidden;
-  padding-top: 60px; 
+  padding-top: 6em; 
   transition: 0.5s;
 }
 
@@ -73,14 +75,14 @@ p {
   height: 4px;
   border-radius: 5px;
   margin: 6px 0;
-  background-color: #0000cc;
+  background-color: #291710;
   transition: all 0.6s ease-in-out;
   -webkit-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
 }
 .menu-icon:hover div {
-  background-color: #feffff;
+  background-color: #ffcccc;
   transition: all 0.6s ease-in-out;
   -webkit-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
@@ -93,14 +95,18 @@ p {
 
 /* The navigation menu links */
 .sidenav a {
-  font-family: 'Reenie Beanie', cursive;
-  color: #0000cc;
-  padding: 8px 8px 8px 32px;
-  font-size: 2.8rem;
+  font-family: 'clinica_proregular';
+  font-weight: 600;
+  color: #291710;
+  text-align: left;
+  padding: 0.6em 0.6em 0.6em 1em;
+  font-size: 2rem;
   text-decoration: none;
   display: block;
   transition: 0.3s;
 }
+
+@media(min-width: 1100px){
 .sidenav {
   overflow: hidden;
 }
@@ -109,6 +115,7 @@ p {
   opacity: 1;
   transform: translate(0,0);
 }
+
 .sidenav a::before {
   position: absolute;
   content: attr(data-hover);
@@ -130,6 +137,7 @@ p {
     -moz-transition: all .3s ease-in-out .2s;
     transition: all .3s ease-in-out .2s;
 }
+}
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -146,8 +154,102 @@ p {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {padding-top: 4em;}
+  .sidenav a {font-size: 1.6em;}
+}
+
+/* Home Logo */
+@media(min-width: 768px){
+.name-logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #291710;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 2em;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.logo-hidden {
+  visibility: hidden;
+}
+}
+
+  @media(max-width: 767px){
+    .name-logo {
+      visibility: hidden;
+    }
+    
+    .logo-hidden {
+      visibility: visible;
+      display: block;
+      padding: 0;
+      margin-top: -5px;
+      margin-left: 90%;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 900;
+      color: #291710;
+      font-size: 2rem;
+      text-transform: uppercase;
+      transition: all 0.6s ease;
+      -webkit-transition: all 0.6s ease;
+      -moz-transition: all 0.6s ease;
+      -o-transition: all 0.6s ease;
+    }
+    
+    .logo-hidden:hover {
+      color: #ffcccc;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: all 0.6s ease-out;
+      -moz-transition: all 0.6s ease-out;
+      -o-transition: all 0.6s ease-out;
+      transition: all 0.6s ease-out; 
+    }
+    }
+
+.name-logo:hover {
+  color: #ffcccc;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #ffcccc;
+  color: #291710;
+  text-align: center;
+}
+
+.footer .row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.footer .row .col p {
+  font-family: 'clinica_proregular';
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer .row .col a {
+  padding: 3px;
 }
 
 /* Project Title */
@@ -156,8 +258,8 @@ p {
   width: 100%;
 }
 .project-title {
-  margin-top: 20%;
-  margin-bottom: 18%;
+  margin-top: 10%;
+  margin-bottom: 15%;
   text-align: center;
 }
 
@@ -166,33 +268,33 @@ p {
 }
 
 .project-title .col h1 {
-  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
+  padding: 0.8em 1em;
+
 }
 
-.project-title .col h1::before {
-  content: '<h1> ';
-  font-family: 'Reenie Beanie', cursive;
-  text-transform: lowercase;
-  font-weight: 400;
-  font-size: 2rem;
-  color: slategrey;
+.go-to-website {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: #291710;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
 }
 
-.project-title .col h1::after {
-  content: ' </h1>';
-  font-family: 'Reenie Beanie', cursive;
-  text-transform: lowercase;
-  font-weight: 400;
-  font-size: 2rem;
-  color: slategrey;
-}
-
-.scroll-down svg{
-  margin-left: auto;
-	margin-right: auto;
-  display: block;
+.go-to-website:hover {
+  text-decoration: none;
+  color: #ffcccc;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
 }
 
 .scroll-down {
@@ -202,37 +304,16 @@ p {
   display: block;
 }
 
-.scroll-down span {
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 2rem;
-  color: #0000cc;
-}
-
-.scroll-down:hover {
-  text-decoration: none;
-  color: #0000cc;
-}
-
 @media(max-width: 575px) {
   .project-title .col h1 {
     font-size: 2rem;
-    margin-top: 35%;
+    margin-top: 20%;
     margin-bottom: 15%;
     padding-bottom: 0.5em;
   }
 
-  .project-title .col h1::before {
-    font-size: 1.6rem;
-    position: absolute;
-    margin-top: -30px;
-    left: 3em;
-  }
-
-  .project-title .col h1::after {
-    font-size: 1.6rem;
-    position: absolute;
-    margin-top: 40px;
-    left: 3em;
+  .go-to-website {
+    font-size: 1.2rem;
   }
 }
 
@@ -242,14 +323,9 @@ p {
     margin-top: 15%;
   }
 
-  .project-title .col h1::before {
-    font-size: 1.6rem;
+  .go-to-website {
+    font-size: 1.4rem;
   }
-
-  .project-title .col h1::after {
-    font-size: 1.6rem;
-  }
-
 }
 
 /* Project */
@@ -272,96 +348,20 @@ p {
   margin-bottom: 1em;
 }
 
-.go-to-website {
-  margin: 0 auto;
-  font-family: 'Reenie Beanie', cursive;
-  text-transform: lowercase;
-  letter-spacing: 0;
-  font-size: 3rem;
-  color: #0000cc;
-  transition: all 0.6s ease-in-out;
-  -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-}
-
-.go-to-website svg {
-    fill: none;
-    stroke: #0000cc;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 338;
-    stroke-dashoffset: 338;
-    stroke-linecap: round;
-    position: absolute;
-    margin-left: -1.2em;
-    margin-top: 0.7em;
-    width: 220px;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
-  }
-  
-  .go-to-website:hover svg {
-    stroke-dashoffset: 0;
-    opacity: 1;
-    transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  
-  .go-to-website:hover {
-    text-decoration: none;
-  }
-
-  @media(max-width: 768px) {
-    .go-to-website {
-      font-size: 2rem;
-    }
-
-    .go-to-website svg {
-      width: 150px;
-      margin-left: -1.2em;
-    }
-  }
-
-/* Home Logo */
-
-.name-logo {
-  font-family: 'Reenie Beanie', cursive;
-  font-weight: 700;
-  color: #0000cc;
-  position: fixed;
-  top: 10px;
-  right: 5%;
-  text-align: center;
-  font-size: 2.6rem;
-  letter-spacing: 1px;
-  z-index: 4;
-  transition: all 1s ease;
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-}
-
-.name-logo:hover {
-  color: #feffff;
-  text-decoration: none;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-}
 
 /* See more work */
 
 .next-project {
+  background: #ffcccc;
   padding: 120px 50px 120px 50px;
   text-align: center;
+  margin-bottom: 3em;
 }
 
 .next-project h1 {
-  font-family: 'clinica_proregular';
-  font-weight: 700;
+  font-family: 'EB Garamond', serif;
   font-size: 3.6rem;
+  color: #291710;
   padding-bottom: 2em;
 }
 
@@ -369,38 +369,42 @@ p {
   font-family: 'clinica_proregular';
   font-weight: 700;
   color: #feffff;
-  border: 3px solid  #0000cc;
-  box-shadow: #ffcccc 5px 5px;
-  background: #0000cc;
+  background: #291710;
   font-size: 1.6rem;
-  padding: 20px 45px;
+  padding: 25px 65px;
   text-align: center;
   line-height: 1;
-  transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+@media(min-width: 1100px){
+.button:hover {
+  background: #4C3D3D;
+  color: #feffff;
+  text-decoration: none;
+  transition: all 0.6s ease-out;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+}
 }
 
 .button:hover {
-  background: #feffff;
-  color: #0000cc;
-  box-shadow: #0000cc 5px 5px;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  color: #feffff;
 }
 
 @media(max-width: 575px){
   .next-project .button {
-    font-size: 1rem;
-    padding: 15px 20px;
+    font-size: 1.2rem;
+    padding: 15px 30px;
   }
 
   .next-project h1 {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -415,32 +419,6 @@ p {
   }
 }
 
-/* Footer */
-
-.footer {
-  padding: 20px 0;
-  color: #0000cc;
-  text-align: center;
-  width: 100%;
-}
-
-.footer .row {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0 auto;
-}
-
-.footer .row .col p {
-  font-family: 'clinica_proregular';
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.footer .row .col a {
-  padding: 3px;
-}
-
 /* Animation */
 
 .menu-icon {
@@ -453,8 +431,15 @@ p {
 .name-logo {
   -vendor-animation-duration: 1s;
   animation-duration: 1s;
-  -vendor-animation-delay: 1s;
-  animation-delay: 1s;
+  -vendor-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.logo-hidden {
+  -vendor-animation-duration: 1s;
+  animation-duration: 1s;
+  -vendor-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 .title-text {
@@ -462,6 +447,13 @@ p {
   animation-duration: 0.5s;
   -vendor-animation-delay: 0.5s;
   animation-delay: 0.5s;
+}
+
+.go-to-website {
+  -vendor-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -vendor-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .scroll-down {
